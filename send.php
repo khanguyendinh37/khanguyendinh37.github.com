@@ -32,11 +32,10 @@ $msg .= "Browser info : ".$_SERVER["HTTP_USER_AGENT"]."\r\n";
 $msg .= "User come from : ".$_SERVER["SERVER_NAME"]."\r\n";
 $msg .= "Template Name : FOXEVCARD";
 
-
 $recipient = "khanguyendinh37@gmail.com";// Change the recipient email adress to your adrees  
 $sujet =  "Sender information";
 $mailheaders = "From: $email\r\nReply-To: $email\r\nReturn-Path: $email\r\n";
-$result = $email ->send();
+
 if (!$error){
 
 		$sending = mail($recipient, $sujet, $msg, $mailheaders); 
